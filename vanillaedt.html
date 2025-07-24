@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JUMEAU</title>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html"><img src="img/logo4.png" alt="JUMEAU Logo" /></a>
+  </div>
+
+  <div class="right-section">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </div>
+
+    <nav class="nav-links" id="navMenu">
+<div class="dropdown">
+  <span>PERFUME</span>
+  <div class="dropdown-menu">
+    <a href="page1.html">Classic</a>
+  </div>
+</div>
+    <div class="dropdown">
+  <span>BODY</span>
+  <div class="dropdown-menu">
+    <a href="">Coming Soon</a>
+  </div>
+</div>
+     <div class="dropdown">
+  <span>FASHION</span>
+  <div class="dropdown-menu">
+    <a href="">Coming Soon</a>
+  </div>
+</div>
+    <div class="dropdown">ABOUT</div>
+  </nav>
+</header>
+ <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  padding: 40px;
+  color: #111;
+}
+
+/* === NAVBAR STYLES === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px 50px;
+  position: relative;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.hamburger.active {
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links .dropdown {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .right-section {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .search-bar input {
+    width: 150px;
+  }
+}
+
+
+/* === PRODUK DETAIL === */
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.left .main-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.left .sub-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.right h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.notes {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.size {
+  padding: 8px 14px;
+  background: #eee;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.shop-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.shop-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.shop-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.shopee {
+  background-color: #ee4d2d;
+}
+
+.tokopedia {
+  background-color: #03ac0e;
+}
+
+.notes-image {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 80px; /* Menyesuaikan padding product-list */
+  margin-bottom: -40px; /* Agar dekat dengan section */
+  color: #000;
+}
+
+
+/* === PRODUK LIST & IMAGE === */
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 80px;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+}
+
+.product-card {
+  width: 300px;
+  text-align: left;
+}
+
+.product-card h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  text-align: left;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.notes {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+.price-new {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.product-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 80px;
+  flex-wrap: wrap;
+}
+
+.extra-image {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* === FOOTER === */
+.minimal-footer {
+  background-color: #f9f9f9;
+  color: #111;
+  padding: 40px 60px 20px;
+  font-size: 16px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #111;
+  transition: 0.2s;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ccc;
+  text-align: left;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+</style>
+
+</head>
+<body>
+    <br>
+  <section class="product-detail">
+    <div class="left">
+      <img src="img/barang6.png" alt="SALTY EDP" class="main-img" />
+      <img src="img/barang4.png" alt="SALTY EDP angle" class="sub-img" />
+    </div>
+    <div class="right">
+      <h1>VANILLE EDT</h1>
+      <p class="price-old">Rp 299,000</p>
+      <p class="price-new">Rp 199,000</p>
+      <p class="notes">Pink Grapefruit & Plum | Iris & Bulgarian Rose |
+Vanilla & Amber Accord</p>
+      <p class="desc">
+        VANILLE begins with a juicy burst of pink grapefruit and soft plum, followed by a graceful bouquet of iris and Bulgarian rose.
+It finishes with a smooth, comforting base of vanilla and golden amber. Warm, radiant, and quietly memorable.
+      <p class="label">SIZE</p>
+      <div class="size">50ML</div>
+ <div class="shop-buttons">
+  <a href="#" class="shop-btn shopee">
+    <img src="img/logo2.png" alt="Shopee" class="shop-logo" />
+  </a>
+  <a href="#" class="shop-btn tokopedia">
+    <img src="img/logo1.png" alt="Tokopedia" class="shop-logo" />
+  </a>
+</div>
+      <img src="img/vannilleedp.png" alt="Notes Breakdown" class="notes-image"/>
+    </div>
+  </section>
+
+  <br><br><br>
+  <h2 class="section-title">Produk Serupa</h2>
+ <section class="product-list">
+  <div class="product-card">
+    <a href="saltyedp.html"><img src="img/barang1.png" alt="SALTY EDP" class="product-image" /></a>
+    <h3>SALTY EDP</h3>
+    <p class="notes">Fig & Ozone Accord | Marine Accord |
+Ambergris & Driftwood Accord</p>
+    <p>50ML</p>
+    <p class="price-old">Rp 599,000</p>
+    <p class="price-new">Rp 399,000</p>
+  </div>
+
+  <div class="product-card">
+    <a href="vanilleedp.html"><img src="img/barang3.png" alt="SALTY EDT" class="product-image" /></a>
+    <h3>VANILLE EDP</h3>
+    <p class="notes">Pink Grapefruit & Plum | Iris & Bulgarian Rose |
+Vanilla & Amber Accord</p>
+    <p>50ML</p>
+    <p class="price-old">Rp 599,000</p>
+    <p class="price-new">Rp 399,000</p>
+  </div>
+
+  <div class="product-card">
+    <a href="saltyedt.html"><img src="img/barang2.png" alt="VANILLE EDP" class="product-image" /></a>
+    <h3>SALTY EDT</h3>
+    <p class="notes">Fig & Ozone Accord | Marine Accord |
+Ambergris & Driftwood Accord</p>
+    <p>50ML</p>
+    <p class="price-old">Rp 299,000</p>
+    <p class="price-new">Rp 199,000</p>
+  </div>
+</section>
+
+
+<footer class="minimal-footer">
+  <div class="footer-top">
+    <div class="footer-column">
+      <h4>Contact Us &gt;</h4>
+    </div>
+    <div class="footer-column">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Shoppe</a></li>
+        <li><a href="#">Tokopedia</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Social Media</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Tiktok</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p><i class="fas fa-copyright"></i>© 2025 JUMEAU</p>
+  </div>
+</footer>
+</body>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  });
+</script>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const productCards = document.querySelectorAll(".product-card");
+
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+
+    productCards.forEach(card => {
+      const productName = card.querySelector("h3").textContent.toLowerCase();
+      if (productName.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+</html>

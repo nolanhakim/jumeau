@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;         /* Pakai warna dari parent */
+  text-decoration: none;  /* Hilangkan garis bawah */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background: url('img/bg.png') no-repeat center center/cover;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-size: 16px;
+}
+
+.nav-links .dropdown {
+  cursor: pointer;
+}
+
+.search-bar input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #eee;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 80px;
+  height: 80vh;
+}
+
+.des {
+  font-size: 14px; /* atau 12px kalau mau lebih kecil */
+  font-weight: normal;
+  margin: 2px 0;
+  color: #ffffff; /* opsional, biar terlihat lebih soft */
+}
+
+
+.shop-logo {
+  height: 20px;
+  width: auto;
+  object-fit: contain;
+}
+
+.shop-now p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.shop-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.shop-btn {
+  padding: 12px 25px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  backdrop-filter: blur(4px);
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #000;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 80px;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+}
+
+.product-card {
+  width: 300px;
+  text-align: left; /* Menjadikan semua isi di dalamnya rata kiri */
+}
+
+.product-card h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;         /* Warna hitam */
+  text-align: left;    /* Rata kiri */
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.notes {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+.price-new {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+
+.product-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 80px;
+  flex-wrap: wrap;
+}
+
+.extra-image {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.minimal-footer {
+  background-color: #f9f9f9;
+  color: #111;
+  padding: 40px 60px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #111;
+  transition: 0.2s;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ccc;
+  text-align: left;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* --- HAMBURGER STYLE --- */
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  color: white;
+  padding: 10px;
+}
+
+.hamburger.active {
+  color: #fff;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown span {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+    .des {
+    font-size: 12px !important;
+  }
+  
+
+  .right-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .search-bar {
+    flex: 1;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
