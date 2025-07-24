@@ -152,6 +152,11 @@ body {
   font-size: 14px;
   margin: 10px 0;
 }
+.ml {
+  color: #000000;
+  font-size: 14px;
+  margin: 10px 0;
+}
 
 .price-old {
   text-decoration: line-through;
