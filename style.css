@@ -149,6 +149,7 @@ body {
   width: 100%;
   border-radius: 4px;
   object-fit: cover;
+   border-radius: 0; /* Penting: Biar nggak rounded */
 }
 
 .product-card h3 {
@@ -337,6 +338,12 @@ body {
   width: auto;
   object-fit: contain;
 }
+.shop-logog {
+  height: 12px;
+  width: auto;
+  object-fit: contain;
+}
+
 
 .shop-now p {
   font-size: 15px;
