@@ -322,7 +322,7 @@ body {
   font-family: 'Arial', sans-serif;
   color: white;
   background: url('img/bg.png') no-repeat center center/cover;
-  height: 60vh;
+  height: 50vh;
   overflow-x: hidden;
 }
 .hero {
