@@ -60,7 +60,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 20px 50px;
+  padding: 20px 0 20px 0; /* atas-bawah 20px, kiri-kanan 0 */
   position: relative;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
@@ -179,6 +179,26 @@ body {
   .search-bar input {
     width: 150px;
   }
+  .notes-image {
+  width: 100%;
+ transform: translateY(-200px); /* naik 30px */
+  border-radius: 0px;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 0; /* Menyesuaikan padding product-list */
+  margin-bottom: -40px; /* Agar dekat dengan section */
+  color: #000;
+}
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 80px;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+}
 }
 
 
@@ -198,13 +218,13 @@ body {
 
 .left .main-img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0; /* Penting: Biar nggak rounded */
   margin-bottom: 20px;
 }
 
 .left .sub-img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 .right {
@@ -254,7 +274,7 @@ body {
 }
 
 .shop-logo {
-  height: 28px;
+  height: 22px;
   width: auto;
   display: block;
 }
@@ -268,7 +288,7 @@ body {
 .shop-btn {
   padding: 10px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 20px;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -284,9 +304,9 @@ body {
 }
 
 .notes-image {
-  width: 100%;
-  margin-top: 30px;
-  border-radius: 8px;
+  width: 90%;
+  margin-top: 230px;
+  border-radius: 0px;
 }
 
 .section-title {
@@ -448,7 +468,7 @@ and wind-kissed skin.
   </section>
 
   <br><br><br>
-  <h2 class="section-title">Produk Serupa</h2>
+  <h2 class="section-title">Related items uppercase</h2>
  <section class="product-list">
   <div class="product-card">
     <a href="vanillaedt.html"><img src="img/barang6.png" alt="SALTY EDP" class="product-image" /></a>
@@ -483,8 +503,7 @@ Vanilla & Amber Accord</p>
 <footer class="minimal-footer">
   <div class="footer-top">
     <div class="footer-column">
-      <h4>Contact Us</h4>
-      <p>081 9326 94419</p>
+      <h4>Contact Us ></h4>
     </div>
     <div class="footer-column">
       <h4>Shop</h4>
