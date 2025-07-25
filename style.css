@@ -343,13 +343,13 @@ body {
   font-weight: bold;
   margin-left: 80px;
   margin-bottom: 20px;
-  transform: translateY(-10px); /* naik 30px */
+  transform: translateY(-30px); /* naik 30px */
 }
 .shop-buttons {
   display: flex;
   margin-left: 10px;
   gap: 10px;
-  transform: translateY(-10px); /* naik 30px */
+  transform: translateY(-30px); /* naik 30px */
 }
   .navbar {
     flex-direction: row;
