@@ -322,7 +322,7 @@ body {
   font-family: 'Arial', sans-serif;
   color: white;
   background: url('img/bg.png') no-repeat center center/cover;
-  height: 50vh;
+  height: 60vh;
   overflow-x: hidden;
 }
 .hero {
@@ -343,13 +343,13 @@ body {
   font-weight: bold;
   margin-left: 80px;
   margin-bottom: 20px;
-  transform: translateY(-30px); /* naik 30px */
+  transform: translateY(-40px); /* naik 30px */
 }
 .shop-buttons {
   display: flex;
   margin-left: 10px;
   gap: 10px;
-  transform: translateY(-30px); /* naik 30px */
+  transform: translateY(-40px); /* naik 30px */
 }
   .navbar {
     flex-direction: row;
