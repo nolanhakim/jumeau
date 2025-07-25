@@ -419,7 +419,7 @@ body {
   }
 
   .product-images img {
-    width: 90%; /* Atur sesuai selera (misalnya 90% layar) */
+    width: 100%; /* Atur sesuai selera (misalnya 90% layar) */
     height: auto; /* Lebih fleksibel dari fixed height */
     margin-bottom: 20px; /* Spasi antar gambar */
       border-radius: 0; /* Penting: Biar nggak rounded */
