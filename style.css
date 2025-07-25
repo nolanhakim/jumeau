@@ -101,7 +101,7 @@ body {
 
 .shop-buttons {
   display: flex;
-  margin-left: 200px;
+  margin-left: 100px;
   gap: 20px;
   transform: translateY(-50px); /* naik 30px */
 }
@@ -347,7 +347,7 @@ body {
 }
 .shop-buttons {
   display: flex;
-  margin-left: 10px;
+  margin-left: 30px;
   gap: 10px;
   transform: translateY(-40px); /* naik 30px */
 }
