@@ -91,6 +91,12 @@ body {
   object-fit: contain;
 }
 
+.shop-logog {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
 .shop-now p {
   font-size: 25px;
   font-weight: bold;
